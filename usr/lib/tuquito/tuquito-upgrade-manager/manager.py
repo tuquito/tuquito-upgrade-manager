@@ -37,25 +37,31 @@ class Manager:
 		self.glade = gtk.Builder()
 		self.glade.add_from_file('./manager.glade')
 		self.window = self.glade.get_object('window')
-		self.glade.get_object('title').set_markup('<big><b>Tiene instalado ' + myVersion + '</b></big>')
-		self.glade.get_object('subtitle').set_markup('Ya está disponible <b>' + newVersion + '</b>!')
-		self.glade.get_object('lup').set_label(_('Comenzar la actualización'))
+		self.glade.get_object('title').set_markup(_('<big><b>Tiene instalado ') + myVersion + '</b></big>')
+		self.glade.get_object('subtitle').set_markup(_('Ya esta disponible <b>') + newVersion + '</b>!')
+		self.glade.get_object('lup').set_label(_('Comenzar la actualizacion'))
 		self.glade.get_object('ldown').set_label(_('Solo descargar la nueva imagen ISO'))
-		self.glade.get_object('lview').set_label(_('Ver las nuevas características en la web'))
+		self.glade.get_object('lview').set_label(_('Ver las nuevas caracteristicas en la web'))
 		self.glade.get_object('lno').set_label(_('No deseo actualizar mi Tuquito'))
 		self.glade.connect_signals(self)
-		self.window.show()
+		#self.window.show()
+
+	def noUpdate(self):
+		self.glade.get_object('message').set_markup(_('<big><b>Informacion</b></big>'))
+		self.glade.get_object('message').format_secondary_markup(_('Ya tienes instalada la ultima version de Tuquito.'))
+		self.glade.get_object('message').show()
 
 	def upgrade(self, widget):
-		print "upgrade"
+		os.system('tuquitup')
 
 	def download(self, widget):
-		print "download"
+		os.system('xdg-open "' + url + '" &')
 
 	def view(self, widget):
-		os.system('xdg-open ' + notes + ' &')
+		os.system('xdg-open "' + notes + '" &')
 
 	def no(self, widget):
+		os.system('touch ~/.tuquito/tuquito-upgrade-manager/norun')
 		self.glade.get_object('message').set_markup(_('<big><b>Atención</b></big>'))
 		self.glade.get_object('message').format_secondary_markup(_('Si desea actualizar su Tuquito luego, puede dirigirse a:\n<i>Menú»Sistema»Adminisración»Upgrade Manager</i>'))
 		self.glade.get_object('message').show()
@@ -68,6 +74,19 @@ class Manager:
 		gtk.main_quit()
 		return True
 
+homePath = os.getenv('HOME') + '/.tuquito/tuquito-upgrade-manager/'
+if not os.path.exists(homePath):
+	os.system('mkdir -p ' + homePath)
+
+try:
+	arg = sys.argv[1].strip()
+except Exception, d:
+	arg = False
+
+if arg == '-d':
+	if os.path.exists(homePath + 'norun'):
+		exit(0)
+
 # Mis datos
 myCodename = commands.getoutput('cat /etc/tuquito/info | grep CODENAME').split('=')[1]
 myRelease = commands.getoutput('cat /etc/tuquito/info | grep RELEASE').split('=')[1]
@@ -77,7 +96,7 @@ myStatus = commands.getoutput('cat /etc/tuquito/info | grep STATUS').split('=')[
 try:
 	file = urlopen("http://releases.tuquito.org.ar/releases.xml")
 except Exception, detail:
-	exit
+	exit(1)
 
 # Parsea el XML
 xmldoc = minidom.parseString(file.read())
@@ -89,6 +108,8 @@ for r in releases:
 		cod = r.childNodes[1].firstChild.data
 		rel = r.childNodes[3].firstChild.data
 		stat = r.childNodes[5].firstChild.data
+		url = r.childNodes[7].firstChild.data
+		notes = url + '?r=' + rel + '&c=' + cod
 	except Exception, detail:
 		break
 
@@ -97,13 +118,15 @@ for r in releases:
 
 	# Compara versiones
 	if cod == myCodename:
+		m = Manager()
 		if float(rel) > float(myRelease):
 			print myRelease + ' > ' + rel
-			Manager()
-			gtk.main()
-			break
+			m.window.show()
 		elif (myStatus == 'alpha' and stat == 'beta' or stat == 'stable') or (myStatus == 'beta' and stat == 'stable'):
 			print myStatus + ' > ' + stat
-			Manager()
-			gtk.main()
-			break
+			m.window.show()
+		elif arg != '-d':
+			print "lanzado por usuario"
+			m.noUpdate()
+		gtk.main()
+		break
