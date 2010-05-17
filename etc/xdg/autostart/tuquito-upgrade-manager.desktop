@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Tuquito Upgrade Manager
+Comment=Aplicación que notifica cuando se encuentra una nueva versión disponible
+Type=Application
+Exec=tuquito-upgrade-manager
+Terminal=false
+Categories=Utility;
