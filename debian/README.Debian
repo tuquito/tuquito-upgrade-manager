@@ -1,0 +1,6 @@
+tuquito-upgrade-manager for Debian
+----------------------------------
+
+Aplicación que gestiona y controla la versión actual de Tuquito, permitiendo la actualización online.
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 17 May 2010 18:05:56 -0300
