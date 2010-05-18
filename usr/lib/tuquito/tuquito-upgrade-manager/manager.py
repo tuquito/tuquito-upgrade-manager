@@ -20,7 +20,15 @@
 """
 
 from time import sleep
-sleep(10*60)
+import sys
+
+try:
+	arg = sys.argv[1].strip()
+except Exception, d:
+	arg = False
+
+if arg == '-d':
+	sleep(10*60)
 
 import gtk, pygtk
 pygtk.require('2.0')
@@ -76,11 +84,6 @@ class Manager:
 homePath = os.getenv('HOME') + '/.tuquito/tuquito-upgrade-manager/'
 if not os.path.exists(homePath):
 	os.system('mkdir -p ' + homePath)
-
-try:
-	arg = sys.argv[1].strip()
-except Exception, d:
-	arg = False
 
 if arg == '-d':
 	if os.path.exists(homePath + 'norun'):
