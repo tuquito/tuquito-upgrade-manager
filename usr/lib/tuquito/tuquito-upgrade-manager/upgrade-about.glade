@@ -17,13 +17,14 @@
     <property name="website">www.tuquito.org.ar</property>
     <property name="website_label">Tuquito Team!</property>
     <property name="authors">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
+    <property name="translator_credits">Mario Colque &lt;mario@tuquito.org.ar&gt;
+Carlos Pessoa de Ara&#xFA;jo &lt;carlosfelipe@tuquito.org.ar&gt;</property>
     <property name="artists">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
     <property name="logo">logo.png</property>
     <signal name="response" handler="quit"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
           <placeholder/>

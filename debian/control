@@ -7,7 +7,7 @@ Standards-Version: 3.8.1
 
 Package: tuquito-upgrade-manager
 Architecture: all
-Depends: tuquito-info-main-32 | tuquito-info-main-64
+Depends: tuquito-info-32 | tuquito-info-64 | tuquito-info-lxde
 Description: Gestor de versiones de Tuquito
  Aplicación que gestiona y controla la versión actual de Tuquito, permitiendo la actualización online.
  * Tuquito Team! - 2010
