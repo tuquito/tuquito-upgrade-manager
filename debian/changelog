@@ -1,3 +1,12 @@
+tuquito-upgrade-manager (0.1-4) lucid; urgency=low
+
+  * agregado el metodo para actaulizar
+  * agregado el metodo para reiniciar el equipo
+  * agregadas las traducciones parciales es, pt
+  * nueva ventana de finalización
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 15 Jun 2010 04:36:23 -0300
+
 tuquito-upgrade-manager (0.1-3) lucid; urgency=low
 
   * versión actualizada para trabajar con el nuevo codename

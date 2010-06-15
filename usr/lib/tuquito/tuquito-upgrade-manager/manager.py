@@ -59,9 +59,17 @@ class Manager:
 		self.glade.get_object('message').show()
 
 	def upgrade(self, widget):
-		os.system('tuquitup &')
-		self.quit(self)
+		self.window.hide()
+		os.system('gksu "synaptic -t=\"Tuquito Upgrade Manager\" --non-interactive --hide-main-window --update-at-startup --dist-upgrade-mode"')
+		os.system('aptitude keep-all')
+		os.system('aptitude unmarkauto ~M')
+		os.system('apt-get clean')
+		os.system('updatedb')
+		self.glade.get_object('label1').set_markup(_('<big><b>Congratulations!</b></big>'))
+		self.glade.get_object('label2').set_label(_('Your Tuquito 4 has been updated successfully.\nNow you can continue to use the system or reboot\nto finish the changes.\nDo you want to restart the computer?'))
+		self.glade.get_object('finish').show()
 
+Now you can still use the system or reboot to finish the changes.
 	def download(self, widget):
 		os.system('xdg-open http://www.tuquito.org.ar/descargas.html &')
 
@@ -76,6 +84,9 @@ class Manager:
 
 	def about(self, widget, data=None):
 		os.system('/usr/lib/tuquito/tuquito-upgrade-manager/upgrade-about.py &')
+
+	def reboot(self, widget):
+		os.system('gksu reboot &')
 
 	def quit(self, widget, data=None):
 		gtk.main_quit()

@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-15 04:27-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:48
+#, python-format
+msgid "<big><b>You have installed %s</b></big>"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:49
+#, python-format
+msgid "Already available <b>%s</b>!"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:50
+msgid "Start upgrade"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:51
+msgid "Only download the new ISO image"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:52
+msgid "See the new features on the web"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:53
+msgid "I don't want to upgrade my Tuquito"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:57
+msgid "<big><b>Information</b></big>"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:58
+#, python-format
+msgid ""
+"You've already installed the latest version of Tuquito.\n"
+"Distribution: <b>%s</b>"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:68
+msgid "<big><b>Congratulations!</b></big>"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:69
+msgid ""
+"Your Tuquito 4 has been updated successfully.\n"
+"Now you can continue to use the system or reboot\n"
+"to finish the changes.\n"
+"Do you want to restart the computer?"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:81
+msgid "<big><b>Atention</b></big>"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:82
+msgid ""
+"To update Tuquito then you can go to:\n"
+"<i>Menu»System»Administration»Upgrade Manager</i>"
+msgstr ""

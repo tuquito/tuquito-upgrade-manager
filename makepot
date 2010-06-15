@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xgettext --language=Python --keyword=_ --output=usr/share/tuquito/locale/templates/tuquito-upgrade-manager.pot usr/lib/tuquito/tuquito-upgrade-manager/manager.py
+xgettext --language=Python --keyword=_ --output=po/tuquito-upgrade-manager.pot usr/lib/tuquito/tuquito-upgrade-manager/manager.py
