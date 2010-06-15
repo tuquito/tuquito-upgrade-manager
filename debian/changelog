@@ -1,3 +1,12 @@
+tuquito-upgrade-manager (0.1-5) lucid; urgency=low
+
+  * Nuevas ventanas de dialogo
+  * Nueva ventana de espera
+  * corrección en traducciones es
+  * Implementación de hilos para los procesos
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 15 Jun 2010 20:42:34 -0300
+
 tuquito-upgrade-manager (0.1-4) lucid; urgency=low
 
   * agregado el metodo para actaulizar

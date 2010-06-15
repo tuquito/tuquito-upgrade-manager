@@ -1,0 +1,12 @@
+#!/bin/bash
+zenity --width=400 --progress --pulsate --auto-close --title="$1" --text="$2" & aptitude keep-all
+killall zenity
+
+zenity --width=400 --progress --pulsate --auto-close --title="$1" --text="$2" & aptitude unmarkauto ~M
+killall zenity
+
+zenity --width=400 --progress --pulsate --auto-close --title="$1" --text="$2" & apt-get clean
+killall zenity
+
+zenity --width=400 --progress --pulsate --auto-close --title="$1" --text="$2" & updatedb
+killall zenity
