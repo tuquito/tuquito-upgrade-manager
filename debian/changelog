@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.1-6) lucid; urgency=low
+
+  * Integración con TuquitUP
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sat, 26 Jun 2010 12:30:11 -0300
+
 tuquito-upgrade-manager (0.1-5) lucid; urgency=low
 
   * Nuevas ventanas de dialogo

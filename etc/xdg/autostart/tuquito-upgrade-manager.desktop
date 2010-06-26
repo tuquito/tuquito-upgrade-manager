@@ -2,6 +2,6 @@
 Name=Tuquito Upgrade Manager
 Comment=Aplicación que notifica cuando se encuentra una nueva versión disponible
 Type=Application
-Exec=/usr/lib/tuquito/tuquito-upgrade-manager/manager.py -d
+Exec=tuquito-upgrade-manager-launcher
 Terminal=false
 Categories=Utility;

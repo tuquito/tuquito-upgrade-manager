@@ -343,7 +343,7 @@
         <child>
           <object class="GtkImage" id="image5">
             <property name="visible">True</property>
-            <property name="stock">gtk-refresh</property>
+            <property name="stock">gtk-connect</property>
             <property name="icon-size">5</property>
           </object>
           <packing>

@@ -19,22 +19,12 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 """
 
-from time import sleep
-import sys
-
-try:
-	arg = sys.argv[1].strip()
-except Exception, d:
-	arg = False
-
-if arg == '-d':
-	sleep(10*60)
-
 import gtk, pygtk
 pygtk.require('2.0')
+from time import sleep
 from xml.dom import minidom
 from urllib2 import urlopen
-import commands, socket, gettext, os, string
+import commands, socket, gettext, os, string, sys
 socket.setdefaulttimeout(10)
 import threading
 
@@ -68,17 +58,13 @@ class UpgradeThread(threading.Thread):
 			self.glade.get_object('window').hide()
 			gtk.gdk.threads_leave()
 
-			os.system("gksu \"synaptic --non-interactive --hide-main-window --update-at-startup --dist-upgrade-mode --parent-window-id " + self.socketId + "\" -D 'Tuquito Upgrade Manager'")
 
-			os.system('gksu /usr/lib/tuquito/tuquito-upgrade-manager/cleanup "%s" "%s"' % (_('Upgrade Tuquito'), _('Cleaning...')))
+			os.system('gksu "synaptic --non-interactive --hide-main-window --update-at-startup --parent-window-id ' + self.socketId + '" -D "Tuquito Upgrade Manager"')
+			os.system('gksu "synaptic --non-interactive --hide-main-window --set-selections-file /usr/lib/tuquito/tuquito-upgrade-manager/tuquitup.list --parent-window-id ' + self.socketId + '" -D "Tuquito Upgrade Manager"')
 
-			gtk.gdk.threads_enter()
-			message = MessageDialog(_('Upgrade finished'), _('The upgrade process is finished, please reboot your computer.'), gtk.MESSAGE_INFO)
-	    		message.show()
-			gtk.gdk.threads_leave()
+			os.system('gksu /usr/lib/tuquito/tuquitup/tuquitup &')
 
 			gtk.main_quit()
-
 		except Exception, detail:
 			print detail
 			message = MessageDialog('Error', _('An error occurred during the upgrade: ') + str(detail), gtk.MESSAGE_ERROR)
@@ -129,9 +115,6 @@ class Manager:
 
 	def about(self, widget, data=None):
 		os.system('/usr/lib/tuquito/tuquito-upgrade-manager/upgrade-about.py &')
-
-	def reboot(self, widget):
-		os.system('gksu reboot &')
 
 	def quit(self, widget, data=None):
 		gtk.main_quit()
@@ -207,14 +190,15 @@ class ConectThread(threading.Thread):
 					sys.exit(0)
 				break
 
+try:
+	arg = sys.argv[1].strip()
+except Exception, d:
+	arg = False
+
 homePath = os.getenv('HOME') + '/.tuquito/tuquito-upgrade-manager/'
 
 if not os.path.exists(homePath):
 	os.system('mkdir -p ' + homePath)
-
-if arg == '-d':
-	if os.path.exists(homePath + 'norun'):
-		sys.exit(0)
 
 # Mis datos
 myCodename = commands.getoutput('cat /etc/tuquito/info | grep CODENAME').split('=')[1]
