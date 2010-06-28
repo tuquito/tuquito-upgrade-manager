@@ -187,7 +187,7 @@ class ConectThread(threading.Thread):
 						distro = 'Tuquito %s "%s" - %s' % (myRelease, myCodename.capitalize(), myEdition)
 					m.noUpdate(distro)
 				else:
-					sys.exit(0)
+					gtk.main_quit()
 				break
 
 try:

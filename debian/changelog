@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.1-7) lucid; urgency=low
+
+  * Corrección de finalización en modo demonio
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 28 Jun 2010 12:02:38 -0300
+
 tuquito-upgrade-manager (0.1-6) lucid; urgency=low
 
   * Integración con TuquitUP
