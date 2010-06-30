@@ -8,76 +8,90 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-26 12:25-0300\n"
+"POT-Creation-Date: 2010-06-30 00:41-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:44
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:78
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:88
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:77
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:87
 msgid "Upgrade Tuquito"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:70
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:69
 msgid "An error occurred during the upgrade: "
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:79
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:78
 #, python-format
 msgid "<big><b>You have installed %s</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:80
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:79
 #, python-format
 msgid "Already available <b>%s</b>!"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:81
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:80
 msgid "Start upgrade"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:82
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:81
 msgid "Only download the new ISO image"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:83
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:82
 msgid "See the new features on the web"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:84
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:83
 msgid "I don't want to upgrade my Tuquito"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:89
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:88
 msgid "<big><b>Information</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:90
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:89
 #, python-format
 msgid ""
 "You've already installed the latest version of Tuquito.\n"
 "Distribution: <b>%s</b>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:111
 msgid "<big><b>Atention</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:113
-msgid ""
-"To update Tuquito then you can go to:\n"
-"<i>Menu»System»Administration»Upgrade Manager</i>"
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+msgid "To update Tuquito then you can go to"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:129
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+msgid "Menu"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+msgid "System"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+msgid "Administration"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:112
+msgid "Tuquito Upgrade Manager"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:128
 msgid "Connecting to server..."
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:157
+#: usr/lib/tuquito/tuquito-upgrade-manager/manager.py:156
 msgid ""
 "Error connecting to server.\n"
 "Try again later."

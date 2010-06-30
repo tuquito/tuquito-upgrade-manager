@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.1-9) lucid; urgency=low
+
+  * Idioma PT completado
+
+ -- Mario Colque <mario@tuquito.org.ar>  Wed, 30 Jun 2010 00:50:37 -0300
+
 tuquito-upgrade-manager (0.1-8) lucid; urgency=low
 
   * Revisión en idiomas

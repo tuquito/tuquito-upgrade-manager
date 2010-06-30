@@ -58,7 +58,6 @@ class UpgradeThread(threading.Thread):
 			self.glade.get_object('window').hide()
 			gtk.gdk.threads_leave()
 
-
 			os.system('gksu "synaptic --non-interactive --hide-main-window --update-at-startup --parent-window-id ' + self.socketId + '" -D "Tuquito Upgrade Manager"')
 			os.system('gksu "synaptic --non-interactive --hide-main-window --set-selections-file /usr/lib/tuquito/tuquito-upgrade-manager/tuquitup.list --parent-window-id ' + self.socketId + '" -D "Tuquito Upgrade Manager"')
 
@@ -110,7 +109,7 @@ class Manager:
 	def no(self, widget):
 		os.system('touch ' + homePath + 'norun')
 		self.glade.get_object('message').set_markup(_('<big><b>Atention</b></big>'))
-		self.glade.get_object('message').format_secondary_markup(_('To update Tuquito then you can go to:\n<i>Menu»System»Administration»Upgrade Manager</i>'))
+		self.glade.get_object('message').format_secondary_markup('%s:\n<i>%s»%s»%s»%s</i>') % (_('To update Tuquito then you can go to'), _('Menu'), _('System'), _('Administration'), _('Tuquito Upgrade Manager')))
 		self.glade.get_object('message').show()
 
 	def about(self, widget, data=None):
