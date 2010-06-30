@@ -1,6 +1,9 @@
 [Desktop Entry]
 Name=Tuquito Upgrade Manager
-Comment=Aplicación que notifica cuando se encuentra una nueva versión disponible
+Name[es]=Gestor de versiones de Tuquito
+Comment=Notification when a new version available
+Comment[es]=Aplicación que notifica cuando se encuentra una nueva versión disponible
+Comment[pt]=Aplicativo que notifica quando há uma nova versão disponível
 Type=Application
 Exec=tuquito-upgrade-manager
 Icon=/usr/lib/tuquito/tuquito-upgrade-manager/logo.png
