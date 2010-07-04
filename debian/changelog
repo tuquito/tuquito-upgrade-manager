@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.1-10) lucid; urgency=low
+
+  * correccion en sintaxis de gettext
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 04 Jul 2010 18:51:59 -0300
+
 tuquito-upgrade-manager (0.1-9) lucid; urgency=low
 
   * Idioma PT completado

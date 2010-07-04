@@ -109,7 +109,7 @@ class Manager:
 	def no(self, widget):
 		os.system('touch ' + homePath + 'norun')
 		self.glade.get_object('message').set_markup(_('<big><b>Atention</b></big>'))
-		self.glade.get_object('message').format_secondary_markup('%s:\n<i>%s»%s»%s»%s</i>') % (_('To update Tuquito then you can go to'), _('Menu'), _('System'), _('Administration'), _('Tuquito Upgrade Manager')))
+		self.glade.get_object('message').format_secondary_markup('%s:\n<i>%s»%s»%s»%s</i>' % (_('To update Tuquito then you can go to'), _('Menu'), _('System'), _('Administration'), _('Tuquito Upgrade Manager')))
 		self.glade.get_object('message').show()
 
 	def about(self, widget, data=None):
