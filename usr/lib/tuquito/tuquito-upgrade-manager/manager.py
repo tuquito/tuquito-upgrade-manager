@@ -104,6 +104,7 @@ class Manager:
 		os.system('xdg-open http://www.tuquito.org.ar/descargas.html &')
 
 	def view(self, widget):
+		global notes
 		os.system('xdg-open "' + notes + '" &')
 
 	def no(self, widget):
@@ -132,7 +133,7 @@ class ConectThread(threading.Thread):
 		return True
 
 	def run(self):
-		global myVersion, newVersion
+		global myVersion, newVersion, notes
 		try:
 			releases = ''
 			if arg != '-d':
@@ -175,9 +176,7 @@ class ConectThread(threading.Thread):
 			# Compara versiones
 			if myEdition == edition:
 				m = Manager()
-				if float(rel) > float(myRelease):
-					m.window.show()
-				elif (myStatus == 'alpha' and stat == 'beta' or stat == 'stable') or (myStatus == 'beta' and stat == 'stable'):
+				if (float(rel) > float(myRelease)) or (myStatus == 'alpha' and (stat == 'beta' or stat == 'rc' or stat == 'stable')) or (myStatus == 'beta' and (stat == 'rc' or stat == 'stable')) or (myStatus == 'rc' and stat == 'stable'):
 					m.window.show()
 				elif arg != '-d':
 					if myStatus != 'stable':

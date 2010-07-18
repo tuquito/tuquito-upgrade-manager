@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.1-11) lucid; urgency=low
+
+  * Corrección en comparación de versiones
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 18 Jul 2010 17:48:27 -0300
+
 tuquito-upgrade-manager (0.1-10) lucid; urgency=low
 
   * correccion en sintaxis de gettext
