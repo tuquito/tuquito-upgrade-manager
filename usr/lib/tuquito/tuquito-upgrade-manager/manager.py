@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
- Tuquito Upgrade Manager 0.1
+ Tuquito Upgrade Manager 0.2
  Copyright (C) 2010
  Author: Mario Colque <mario@tuquito.org.ar>
  Tuquito Team! - www.tuquito.org.ar
@@ -19,8 +19,7 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 """
 
-import gtk, pygtk
-pygtk.require('2.0')
+import gtk
 from time import sleep
 from xml.dom import minidom
 from urllib2 import urlopen
@@ -148,9 +147,7 @@ class ConectThread(threading.Thread):
 			gtk.gdk.threads_enter()
 			self.window.hide()
 			gtk.gdk.threads_leave()
-
-		except Exception, detail:
-			print detail
+		except:
 			if arg != '-d':
 				gtk.gdk.threads_enter()
 				self.window.hide()
@@ -208,3 +205,4 @@ myEdition = commands.getoutput('cat /etc/tuquito/info | grep EDITION').split('='
 conect = ConectThread()
 conect.start()
 gtk.main()
+
