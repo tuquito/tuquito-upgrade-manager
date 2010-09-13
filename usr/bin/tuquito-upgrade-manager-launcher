@@ -1,9 +1,9 @@
 #!/bin/sh
-DIR=$HOME'/.tuquito/tuquito-upgrade-manager/norun'
+DIR="$HOME/.tuquito/tuquito-upgrade-manager/norun"
 if [ ! -f $DIR ]; then
 	if [ "`mount | grep "aufs"`" = "" ]; then
 		sleep 60
-		/usr/lib/tuquito/tuquito-upgrade-manager/manager.py -d &
+		/usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py -d &
 		exit 0
 	fi;
 fi;
