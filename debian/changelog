@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.2-2) maverick; urgency=low
+
+  * rebranded to maverick
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 16 Sep 2010 13:18:13 -0300
+
 tuquito-upgrade-manager (0.2-1) lucid; urgency=low
 
   * new icon
