@@ -1,2 +1,5 @@
 #!/bin/bash
-xgettext --language=Python --keyword=_ --output=po/tuquito-upgrade-manager.pot usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py
+xgettext --language=Python --keyword=_ --output=po/tuquito-upgrade-manager.pot usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py --from-code=utf-8
+cd po
+msgmerge es.po tuquito-upgrade-manager.pot -o es.po
+msgmerge pt_BR.po tuquito-upgrade-manager.pot -o pt_BR.po

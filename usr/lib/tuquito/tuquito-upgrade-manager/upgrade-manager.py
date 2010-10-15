@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
- Tuquito Upgrade Manager 0.2-1
+ Tuquito Upgrade Manager 0.3
  Copyright (C) 2010
  Author: Mario Colque <mario@tuquito.org.ar>
  Tuquito Team! - www.tuquito.org.ar
@@ -59,7 +59,8 @@ class UpgradeThread(threading.Thread):
 			os.system('gksu "synaptic --non-interactive --hide-main-window --update-at-startup --parent-window-id ' + self.socketId + '" -D /usr/share/applications/tuquito-upgrade-manager.desktop')
 			os.system('gksu "synaptic --non-interactive --hide-main-window --set-selections-file /usr/lib/tuquito/tuquito-upgrade-manager/tuquitup.list --parent-window-id ' + self.socketId + '" -D /usr/share/applications/tuquito-upgrade-manager.desktop')
 			os.system('gksu /usr/lib/tuquito/tuquitup/tuquitup &')
-			gtk.main_quit()
+			#gtk.main_quit()
+			sys.exit(0)
 		except Exception, detail:
 			message = MessageDialog('Error', _('An error occurred during the upgrade: ') + str(detail), gtk.MESSAGE_ERROR)
 	    		message.show()
@@ -108,8 +109,17 @@ class Manager:
 		self.glade.get_object('message').format_secondary_markup('%s:\n<i>%s»%s»%s»%s</i>' % (_('To update Tuquito later, you can go to'), _('Menu'), _('System'), _('Administration'), _('Tuquito Upgrade Manager')))
 		self.glade.get_object('message').show()
 
-	def about(self, widget, data=None):
-		os.system('/usr/lib/tuquito/tuquito-upgrade-manager/upgrade-about.py &')
+	def about(self, widget):
+		abt = self.glade.get_object('about')
+		abt.connect('response', self.quitAbout)
+		abt.connect('delete-event', self.quitAbout)
+		abt.connect('destroy-event', self.quitAbout)
+		abt.set_comments(_('Upgrade Manager for Tuquito'))
+		abt.show()
+
+	def quitAbout(self, widget, data=None):
+		widget.hide()
+		return True
 
 	def quit(self, widget, data=None):
 		gtk.main_quit()
@@ -158,13 +168,13 @@ class ConectThread(threading.Thread):
 				stat = r.childNodes[5].firstChild.data
 				notes = r.childNodes[7].firstChild.data
 				edition = r.childNodes[11].firstChild.data
-			except Exception, detail:
+			except:
 				sys.exit(1)
 
 			myVersion = 'Tuquito %s (%s)' % (myRelease, myStatus)
 			newVersion = 'Tuquito %s (%s)' % (rel, stat)
 
-			# Compara versiones
+			# Compare versions
 			if myEdition == edition:
 				m = Manager()
 				if (float(rel) > float(myRelease)) or (myStatus == 'alpha' and (stat == 'beta' or stat == 'rc' or stat == 'stable')) or (myStatus == 'beta' and (stat == 'rc' or stat == 'stable')) or (myStatus == 'rc' and stat == 'stable'):
@@ -176,27 +186,32 @@ class ConectThread(threading.Thread):
 						distro = 'Tuquito %s "%s" - %s' % (myRelease, myCodename.capitalize(), myEdition)
 					m.noUpdate(distro)
 				else:
-					gtk.main_quit()
+					#gtk.main_quit()
+					sys.exit(0)
 				break
 
+# Init
 try:
 	arg = sys.argv[1].strip()
-except Exception, d:
+except:
 	arg = False
 
 homePath = os.path.join(os.getenv('HOME'), '.tuquito/tuquito-upgrade-manager')
-
 if not os.path.exists(homePath):
 	os.system('mkdir -p ' + homePath)
 
-# Mis datos
-myCodename = commands.getoutput('cat /etc/tuquito/info | grep CODENAME').split('=')[1]
-myRelease = commands.getoutput('cat /etc/tuquito/info | grep RELEASE').split('=')[1]
-myStatus = commands.getoutput('cat /etc/tuquito/info | grep STATUS').split('=')[1]
-myEdition = commands.getoutput('cat /etc/tuquito/info | grep EDITION').split('=')[1].replace('"', '')
+# My data
+try:
+	myCodename = commands.getoutput('grep CODENAME /etc/tuquito/info').split('=')[1]
+	myRelease = commands.getoutput('grep RELEASE /etc/tuquito/info').split('=')[1]
+	myStatus = commands.getoutput('grep STATUS /etc/tuquito/info').split('=')[1]
+	myEdition = commands.getoutput('grep EDITION /etc/tuquito/info').split('=')[1].replace('"', '')
+except Exception, details:
+	message = MessageDialog('Error', _('An error occurred during connection: ') + str(detail), gtk.MESSAGE_ERROR)
+	message.show()
+	sys.exit(1)
 
-# Inicio los hilos
+# Threads
 conect = ConectThread()
 conect.start()
 gtk.main()
-
