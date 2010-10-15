@@ -1,3 +1,13 @@
+tuquito-upgrade-manager (0.3) maverick; urgency=low
+
+  * new translations
+  * new launcher file
+  * new exception control
+  * about windows unified with main window
+  * grep unified with cat
+
+ -- Mario Colque <mario@tuquito.org.ar>  Fri, 15 Oct 2010 13:38:41 -0300
+
 tuquito-upgrade-manager (0.2-2) maverick; urgency=low
 
   * rebranded to maverick
