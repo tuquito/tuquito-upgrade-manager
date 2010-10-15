@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-15 13:34-0300\n"
+"POT-Creation-Date: 2010-10-15 14:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,85 +17,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:43
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:73
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:83
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:72
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:82
 msgid "Upgrade Tuquito"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:65
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:64
 msgid "An error occurred during the upgrade: "
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:74
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:73
 #, python-format
 msgid "<big><b>You have installed %s</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:75
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:74
 #, python-format
 msgid "Already available <b>%s</b>!"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:76
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:75
 msgid "Start upgrade"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:77
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:76
 msgid "Only download the new ISO image"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:78
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:77
 msgid "See the new features on the web"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:79
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:78
 msgid "I don't want to upgrade my Tuquito"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:84
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:83
 msgid "<big><b>Information</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:85
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:84
 #, python-format
 msgid ""
 "You've already installed the latest version of Tuquito.\n"
 "Distribution: <b>%s</b>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:107
 msgid "<big><b>Atention</b></big>"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:109
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
 msgid "To update Tuquito later, you can go to"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:109
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
 msgid "Menu"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:109
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
 msgid "System"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:109
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
 msgid "Administration"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:109
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:108
 msgid "Tuquito Upgrade Manager"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:117
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:116
 msgid "Upgrade Manager for Tuquito"
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:134
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:133
 msgid "Connecting to server..."
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:158
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:157
 msgid ""
 "Error connecting to server.\n"
 "Try again later."
