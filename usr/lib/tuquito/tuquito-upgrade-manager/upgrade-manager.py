@@ -59,8 +59,7 @@ class UpgradeThread(threading.Thread):
 			os.system('gksu "synaptic --non-interactive --hide-main-window --update-at-startup --parent-window-id ' + self.socketId + '" -D /usr/share/applications/tuquito-upgrade-manager.desktop')
 			os.system('gksu "synaptic --non-interactive --hide-main-window --set-selections-file /usr/lib/tuquito/tuquito-upgrade-manager/tuquitup.list --parent-window-id ' + self.socketId + '" -D /usr/share/applications/tuquito-upgrade-manager.desktop')
 			os.system('gksu /usr/lib/tuquito/tuquitup/tuquitup &')
-			#gtk.main_quit()
-			sys.exit(0)
+			gtk.main_quit()
 		except Exception, detail:
 			message = MessageDialog('Error', _('An error occurred during the upgrade: ') + str(detail), gtk.MESSAGE_ERROR)
 	    		message.show()
@@ -186,9 +185,10 @@ class ConectThread(threading.Thread):
 						distro = 'Tuquito %s "%s" - %s' % (myRelease, myCodename.capitalize(), myEdition)
 					m.noUpdate(distro)
 				else:
-					#gtk.main_quit()
-					sys.exit(0)
+					gtk.main_quit()
 				break
+		gtk.main_quit()
+
 
 # Init
 try:
