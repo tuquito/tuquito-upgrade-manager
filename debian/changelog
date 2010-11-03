@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.3-2) maverick; urgency=low
+
+  * autoclose fixed
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 02 Nov 2010 23:10:52 -0300
+
 tuquito-upgrade-manager (0.3-1) maverick; urgency=low
 
   * autokill fixed
