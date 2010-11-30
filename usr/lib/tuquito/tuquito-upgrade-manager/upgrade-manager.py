@@ -189,7 +189,6 @@ class ConectThread(threading.Thread):
 				break
 		#gtk.main_quit()
 
-
 # Init
 try:
 	arg = sys.argv[1].strip()
@@ -198,7 +197,7 @@ except:
 
 homePath = os.path.join(os.getenv('HOME'), '.tuquito/tuquito-upgrade-manager')
 if not os.path.exists(homePath):
-	os.system('mkdir -p ' + homePath)
+	os.system('mkdir -p %s &' % homePath)
 
 # My data
 try:

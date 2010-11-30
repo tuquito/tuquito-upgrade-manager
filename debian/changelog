@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.3-3) maverick; urgency=low
+
+  * added RC status
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 29 Nov 2010 21:03:20 -0300
+
 tuquito-upgrade-manager (0.3-2) maverick; urgency=low
 
   * autoclose fixed
