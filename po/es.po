@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuquito Upgrade Manager 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-29 21:01-0300\n"
+"POT-Creation-Date: 2010-12-30 18:44-0300\n"
 "PO-Revision-Date: 2010-06-15 03:16-0300\n"
 "Last-Translator: Mario Colque <mario@tuquito.org.ar>\n"
 "Language-Team: Spanish\n"
@@ -106,6 +106,6 @@ msgstr ""
 "Error de conexión con el servidor.\n"
 "Inténtalo nuevamente más tarde."
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:209
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:208
 msgid "An error occurred during connection: "
 msgstr "Ha ocurrido un error durante la conexión: "

@@ -187,7 +187,6 @@ class ConectThread(threading.Thread):
 				else:
 					gtk.main_quit()
 				break
-		#gtk.main_quit()
 
 # Init
 try:

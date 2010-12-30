@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-29 21:01-0300\n"
+"POT-Creation-Date: 2010-12-30 18:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,6 +102,6 @@ msgid ""
 "Try again later."
 msgstr ""
 
-#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:209
+#: usr/lib/tuquito/tuquito-upgrade-manager/upgrade-manager.py:208
 msgid "An error occurred during connection: "
 msgstr ""

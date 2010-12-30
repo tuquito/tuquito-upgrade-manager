@@ -1,3 +1,9 @@
+tuquito-upgrade-manager (0.3-4) maverick; urgency=low
+
+  * fixed permissions
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 30 Dec 2010 18:45:10 -0300
+
 tuquito-upgrade-manager (0.3-3) maverick; urgency=low
 
   * added RC status
